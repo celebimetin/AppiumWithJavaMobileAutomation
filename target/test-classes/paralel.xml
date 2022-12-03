@@ -1,0 +1,8 @@
+<suite name="AppiumProject" verbose="1">
+    <parameter name="browser" value="Android"></parameter>
+    <test name="AppiumProject">
+        <classes>
+            <class name="testRunners.runner"></class>
+        </classes>
+    </test>
+</suite>
