@@ -16,9 +16,9 @@ public class driverFactory {
         capabilities = new DesiredCapabilities();
         if (browser.equals("Android")){
             capabilities.setCapability("platformName", "Android");
-            capabilities.setCapability("udid", "");
-            capabilities.setCapability("appPackage", "");
-            capabilities.setCapability("appActivity","");
+            capabilities.setCapability("udid", "emulator-5554");
+            capabilities.setCapability("appPackage", "com.dmall.mfandroid");
+            capabilities.setCapability("appActivity","com.dmall.mfandroid.activity.base.NewSplash");
         }
         else if (browser.equals("IOS")) {
             capabilities.setCapability("platformName", "IOS");
@@ -28,7 +28,7 @@ public class driverFactory {
         }
 
         try {
-            driver = new AppiumDriver(new URL("https://0.0.0.0:4723/wd/hub"), capabilities);
+            driver = new AppiumDriver(new URL("http://0.0.0.0:4723/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
             throw new RuntimeException(e);
         }

@@ -8,8 +8,8 @@ import org.testng.Reporter;
 import java.util.Properties;
 
 public class hooks {
-    private static AppiumDriver driver;
-    private static Properties properties;
+    AppiumDriver driver;
+    Properties properties;
 
     @Before
     public void Before(){
